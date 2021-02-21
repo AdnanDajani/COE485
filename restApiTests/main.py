@@ -9,7 +9,7 @@ names={"saleh":{"age":23, "Major":"COE"},
 
 
 
-TLs={"1":{"streets":{"1":{"amountOfTraffic":1}}}}
+#TLs={"1":{"streets":{"1":{"amountOfTraffic":1}}}}
 
 video_put_args=reqparse.RequestParser()
 video_put_args.add_argument("name", type=str, help="Name of the video")
@@ -18,15 +18,18 @@ video_put_args.add_argument("likes", type=int, help="Likes of the video")
 
 
 TL_put_args=reqparse.RequestParser()
+TL_get_args=reqparse.RequestParser()
 
-TL_put_args.add_argument("delays", type=int, help="the delys for the traffic light", action='append')
+
+TL_put_args.add_argument("delays", type=str, help="the delys for the traffic light")
+TL_get_args.add_argument("TA", type=str, help="the traffic amount on each street")
 
 
 
 
 videos={}
 
-delays={1:{1:2, 2:2, 3:2, 4:2},2:{1:4, 2:4, 3:4, 4:4}}
+delays={1:[2,2,2,2],2:[4,4,4,4]}
 
 
 
@@ -48,14 +51,23 @@ class Video(Resource):
 
 class TLD(Resource):
     def get(self, TL_id):
+        args=TL_get_args.parse_args()
+        temp=args['TA'].split(',')
+        new_delays=[]
+        for i in range(len(temp)):
+            new_delays.append(int(float(temp[i])*5))
+        return new_delays
+
+    def get_without_traffic(self, TL_id):
         return delays[TL_id]
 
     def put(self, TL_id):
         args=request.form.to_dict(flat=False)
         if not TL_id in delays:
-            delays[TL_id]={1:0, 2:0, 3:0, 4:0}
-        for i in range(len(args['delays'])):
-            delays[TL_id][str(i+1)]=args['delays'][i]
+            delays[TL_id]=[1,1,1,1]
+        for i in range(len(args['delays'][0].split(','))):
+            temp=args['delays'][0].split(',')
+            delays[TL_id][i]=int(temp[i])
         return delays[TL_id], 201
 
 
