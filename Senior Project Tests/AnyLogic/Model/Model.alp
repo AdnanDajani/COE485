@@ -555,41 +555,6 @@
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1614065256720</Id>
-					<Name><![CDATA[connector16]]></Name>
-					<X>590</X><Y>1620</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carMoveTo6]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarMoveTo]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carDispose1]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarDispose]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>180</X><Y>0</Y></Point>
-						<Point><X>180</X><Y>-100</Y></Point>
-						<Point><X>230</X><Y>-100</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1614065263018</Id>
 					<Name><![CDATA[connector17]]></Name>
 					<X>590</X><Y>1660</Y>
@@ -660,41 +625,6 @@
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1614065286650</Id>
-					<Name><![CDATA[connector12]]></Name>
-					<X>400</X><Y>1560</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[model]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[selectOutput6]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[SelectOutput5]]></ClassName>
-						<ItemName><![CDATA[out3]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[model]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carMoveTo6]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarMoveTo]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>120</X><Y>0</Y></Point>
-						<Point><X>120</X><Y>60</Y></Point>
-						<Point><X>150</X><Y>60</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1614065293743</Id>
 					<Name><![CDATA[connector13]]></Name>
 					<X>400</X><Y>1580</Y>
@@ -727,6 +657,76 @@
 						<Point><X>110</X><Y>0</Y></Point>
 						<Point><X>110</X><Y>80</Y></Point>
 						<Point><X>150</X><Y>80</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1614083912495</Id>
+					<Name><![CDATA[connector16]]></Name>
+					<X>590</X><Y>1620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[model]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo6]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[model]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose1]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>180</X><Y>0</Y></Point>
+						<Point><X>180</X><Y>-100</Y></Point>
+						<Point><X>230</X><Y>-100</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1614083921406</Id>
+					<Name><![CDATA[connector12]]></Name>
+					<X>400</X><Y>1560</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[model]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput6]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[out3]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[model]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo6]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>120</X><Y>0</Y></Point>
+						<Point><X>120</X><Y>60</Y></Point>
+						<Point><X>150</X><Y>60</Y></Point>
 					</Points>
 				</Connector>
 			</Connectors>
@@ -1930,6 +1930,9 @@
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[destination]]></Name>
+							<Value Class="CodeValue">
+								<Code><![CDATA[self.END_OF_BACKWARD_LANE]]></Code>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[parkingLot]]></Name>
@@ -2172,11 +2175,12 @@
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>false</ShowLabel>
+					<Lock>true</Lock>
 					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
-					<Width>835</Width>
-					<Height>845</Height>
+					<Width>1000</Width>
+					<Height>1100</Height>
 					<Rotation>0.0</Rotation>
 					<ImageFiles>
 						<ImageResourceReference>
@@ -2184,7 +2188,7 @@
 							<ClassName><![CDATA[Demo Map.JPG]]></ClassName>
 						</ImageResourceReference>
 					</ImageFiles>
-					<OriginalSize>true</OriginalSize>
+					<OriginalSize>false</OriginalSize>
 				</Image>
 				<RoadNetwork>
 					<Id>1613910069760</Id>
@@ -3153,12 +3157,19 @@
 						<Point><X>0</X><Y>0</Y></Point>
 						<Point><X>-0.03766791394679103</X><Y>5.937350411334791</Y></Point>
 						<Point><X>-1.9232037607754933</X><Y>9.813321929629069</Y></Point>
+						<Point><X>1.4008955580080231</X><Y>2.477150536187053</Y></Point>
+						<Point><X>-8.000017418071561</X><Y>-0.932077413976808</Y></Point>
+						<Point><X>10.801808534087606</X><Y>5.886378486350914</Y></Point>
+						<Point><X>1.4008955580080231</X><Y>2.4771505361870534</Y></Point>
+						<Point><X>-8.000017418071561</X><Y>-0.9320774139768071</Y></Point>
+						<Point><X>10.801808534087606</X><Y>5.886378486350914</Y></Point>
 						<Point><X>4.293328344212739</X><Y>0.841401645339289</Y></Point>
 						<Point><X>2.370124583437189</X><Y>10.654723574968358</Y></Point>
 						<Point><X>-0.03766791394679103</X><Y>5.937350411334791</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>0</TargetLane>
+					<CustomPoints>true</CustomPoints>
 				</LaneConnector>
 				<LaneConnector SourceId="1613910050630" TargetId="1613910050630">
 					<Id>1613910249459</Id>
