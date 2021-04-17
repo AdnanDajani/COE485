@@ -18,8 +18,14 @@
 			<Name><![CDATA[Main]]></Name>
 			<AdditionalClassCode><![CDATA[public int x = 1, i1r=10 , i1r1 = 10, i1r2=10, i1r3=10; // check again
 public int i2r2=10 , i2r4 = 10, i2r5=10; // check again
-public int[] i1 = {100,100,100,100};
-public int[] i2 = {100,100,100};
+public int[] i1 = {10,10,10,10};
+public int[] i2 = {10,10,10};
+public int[] i1Time= {0,0,0,0};
+public int[] i2Time= {0,0,0};
+
+public boolean[] tr1Turn = {true, false, false, false};
+public boolean[] tr2Turn = {true, false, false};
+
 MqttClient client;]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Import><![CDATA[import org.eclipse.paho.client.mqttv3.*;
@@ -121,86 +127,121 @@ import org.json.simple.parser.JSONParser;]]></Import>
 			<CurrentLevel>1618609451995</CurrentLevel>
 			<ConnectionsId>1618609451991</ConnectionsId>
 			<TrafficLight>
-				<Id>1618610314696</Id>
-				<Name><![CDATA[trafficLight]]></Name>
+				<Id>1618683387999</Id>
+				<Name><![CDATA[trafficLight1]]></Name>
+				<X>300</X><Y>230</Y>
+				<Label><X>0</X><Y>-20</Y></Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<Type>STOP_LINES</Type>
+				<Line>1618610023996</Line>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Duration>
+				<DefaultState>RED</DefaultState>
+				<State>RED</State>
+			</TrafficLight>
+			<TrafficLight>
+				<Id>1618683423007</Id>
+				<Name><![CDATA[trafficLight2]]></Name>
+				<X>440</X><Y>230</Y>
+				<Label><X>0</X><Y>-20</Y></Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<Type>STOP_LINES</Type>
+				<Line>1618610023997</Line>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[200]]></Code>
+				</Duration>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[i1[2]]]></Code>
+				</Duration>
+				<DefaultState>RED</DefaultState>
+				<DefaultState>RED</DefaultState>
+				<State>RED</State>
+				<State>GREEN</State>
+			</TrafficLight>
+			<TrafficLight>
+				<Id>1618683426461</Id>
+				<Name><![CDATA[trafficLight3]]></Name>
 				<X>450</X><Y>360</Y>
 				<Label><X>0</X><Y>-20</Y></Label>
 				<PublicFlag>false</PublicFlag>
 				<PresentationFlag>true</PresentationFlag>
 				<ShowLabel>true</ShowLabel>
-				<Type>JUNCTION_STOP_LINES</Type>
-				<Junction>1618610023976</Junction>
-				<Line>1618610023995</Line>
-				<Line>1618610023996</Line>
-				<Line>1618610023997</Line>
+				<Type>STOP_LINES</Type>
 				<Line>1618610034588</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[i1[0]]]></Code>
-				</Duration>
-				<Duration Class="CodeValue">
-					<Code><![CDATA[i1[1]]]></Code>
-				</Duration>
-				<Duration Class="CodeValue">
-					<Code><![CDATA[i1[2]]]></Code>
-				</Duration>
-				<Duration Class="CodeValue">
-					<Code><![CDATA[i1[3]]]></Code>
+					<Code><![CDATA[1]]></Code>
 				</Duration>
 				<DefaultState>RED</DefaultState>
-				<DefaultState>RED</DefaultState>
-				<DefaultState>RED</DefaultState>
-				<DefaultState>RED</DefaultState>
-				<State>GREEN</State>
 				<State>RED</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>GREEN</State>
 			</TrafficLight>
 			<TrafficLight>
-				<Id>1618610321988</Id>
-				<Name><![CDATA[trafficLight1]]></Name>
+				<Id>1618683429942</Id>
+				<Name><![CDATA[trafficLight]]></Name>
+				<X>300</X><Y>360</Y>
+				<Label><X>0</X><Y>-20</Y></Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<Type>STOP_LINES</Type>
+				<Line>1618610023995</Line>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Duration>
+				<DefaultState>RED</DefaultState>
+				<State>RED</State>
+			</TrafficLight>
+			<TrafficLight>
+				<Id>1618683452296</Id>
+				<Name><![CDATA[trafficLight5]]></Name>
+				<X>870</X><Y>240</Y>
+				<Label><X>0</X><Y>-20</Y></Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<Type>STOP_LINES</Type>
+				<Line>1618610206823</Line>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Duration>
+				<DefaultState>RED</DefaultState>
+				<State>RED</State>
+			</TrafficLight>
+			<TrafficLight>
+				<Id>1618683455604</Id>
+				<Name><![CDATA[trafficLight4]]></Name>
+				<X>870</X><Y>360</Y>
+				<Label><X>0</X><Y>-20</Y></Label>
+				<PublicFlag>false</PublicFlag>
+				<PresentationFlag>true</PresentationFlag>
+				<ShowLabel>true</ShowLabel>
+				<Type>STOP_LINES</Type>
+				<Line>1618610206822</Line>
+				<Duration Class="CodeValue">
+					<Code><![CDATA[1]]></Code>
+				</Duration>
+				<DefaultState>RED</DefaultState>
+				<State>RED</State>
+			</TrafficLight>
+			<TrafficLight>
+				<Id>1618683459321</Id>
+				<Name><![CDATA[trafficLight6]]></Name>
 				<X>1020</X><Y>330</Y>
 				<Label><X>0</X><Y>-20</Y></Label>
 				<PublicFlag>false</PublicFlag>
 				<PresentationFlag>true</PresentationFlag>
 				<ShowLabel>true</ShowLabel>
-				<Type>JUNCTION_STOP_LINES</Type>
-				<Junction>1618610206802</Junction>
-				<Line>1618610206822</Line>
-				<Line>1618610206823</Line>
+				<Type>STOP_LINES</Type>
 				<Line>1618610206824</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[i2[0]]]></Code>
-				</Duration>
-				<Duration Class="CodeValue">
-					<Code><![CDATA[i2[1]]]></Code>
-				</Duration>
-				<Duration Class="CodeValue">
-					<Code><![CDATA[i2[2]]]></Code>
+					<Code><![CDATA[1]]></Code>
 				</Duration>
 				<DefaultState>RED</DefaultState>
-				<DefaultState>RED</DefaultState>
-				<DefaultState>RED</DefaultState>
-				<State>GREEN</State>
 				<State>RED</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>GREEN</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>RED</State>
-				<State>GREEN</State>
 			</TrafficLight>
 			<Connectors>
 				<Connector>
@@ -1530,7 +1571,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 				<Event>
 					<Id>1618615415065</Id>
 					<Name><![CDATA[sendTraffic1]]></Name>
-					<X>450</X><Y>210</Y>
+					<X>450</X><Y>90</Y>
 					<Label><X>5</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -1556,7 +1597,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[sendFunc1();]]></Action>
+					<Action><![CDATA[//sendFunc1();]]></Action>
 				</Event>
 				<Event>
 					<Id>1618615432589</Id>
@@ -1592,7 +1633,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 				<Event>
 					<Id>1618615482390</Id>
 					<Name><![CDATA[sendTraffic2]]></Name>
-					<X>1020</X><Y>270</Y>
+					<X>1020</X><Y>220</Y>
 					<Label><X>5</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -1618,12 +1659,12 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[sendFunc2();]]></Action>
+					<Action><![CDATA[//sendFunc2();]]></Action>
 				</Event>
 				<Event>
 					<Id>1618615482396</Id>
 					<Name><![CDATA[connect2]]></Name>
-					<X>1020</X><Y>230</Y>
+					<X>1020</X><Y>180</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1680,7 +1721,296 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[getPriority();]]></Action>
+					<Action><![CDATA[//getPriority();]]></Action>
+				</Event>
+				<Event>
+					<Id>1618683888161</Id>
+					<Name><![CDATA[tr2]]></Name>
+					<X>510</X><Y>240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[function2();
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1618684392640</Id>
+					<Name><![CDATA[tr3]]></Name>
+					<X>510</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[function3();
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1618684395841</Id>
+					<Name><![CDATA[tr]]></Name>
+					<X>240</X><Y>380</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[//hasAmb()]]></Condition>
+					</Properties>
+					<Action><![CDATA[function();
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1618684398516</Id>
+					<Name><![CDATA[tr1]]></Name>
+					<X>240</X><Y>240</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[function1();
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1618684757578</Id>
+					<Name><![CDATA[checkAmb]]></Name>
+					<X>640</X><Y>430</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[!hasAmb()]]></Condition>
+					</Properties>
+					<Action><![CDATA[checkAmb1();]]></Action>
+				</Event>
+				<Event>
+					<Id>1618689225192</Id>
+					<Name><![CDATA[PrintStatus]]></Name>
+					<X>270</X><Y>140</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[System.out.println("Time ellapsed: "+ tr1Turn[0] + " " + tr1Turn[1] + " " + tr1Turn[2] + " " + tr1Turn[3] + " " 
++ i1Time[0]+ " " + i1Time[1]+ " " + i1Time[2]+ " " + i1Time[3]
++ " | | " + tr2Turn[0]+ " " + tr2Turn[1]+ " " + tr2Turn[2]+ " "
++ i2Time[0] + " " + i2Time[1] + " " + i2Time[2] );]]></Action>
+				</Event>
+				<Event>
+					<Id>1618691116528</Id>
+					<Name><![CDATA[tr4]]></Name>
+					<X>810</X><Y>230</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[function4();
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1618691120773</Id>
+					<Name><![CDATA[tr5]]></Name>
+					<X>880</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[function5();
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1618691126033</Id>
+					<Name><![CDATA[tr6]]></Name>
+					<X>1030</X><Y>370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[function6();
+]]></Action>
 				</Event>
 			</Events>
 			<Functions>
@@ -1689,7 +2019,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1618615415059</Id>
 					<Name><![CDATA[sendFunc1]]></Name>
-					<X>450</X><Y>230</Y>
+					<X>450</X><Y>110</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -1718,7 +2048,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1618615415062</Id>
 					<Name><![CDATA[recieveTraffic1]]></Name>
-					<X>450</X><Y>250</Y>
+					<X>450</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
@@ -1796,7 +2126,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 					<ReturnType><![CDATA[double]]></ReturnType>
 					<Id>1618615482386</Id>
 					<Name><![CDATA[sendFunc2]]></Name>
-					<X>1020</X><Y>290</Y>
+					<X>1020</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1830,13 +2160,277 @@ import org.json.simple.parser.JSONParser;]]></Import>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[System.out.println("######"+road.getCars(true));
+					<Body><![CDATA[System.out.println("######"+road2.getCars(true));
 if(!road.getCars(true).isEmpty()){
 int j;
-for(int i = 0; i < road.getCars(true).size(); i++){
-	j = Integer.parseInt(road.getCars(true).get(i).toString());
+for(int i = 0; i < road2.getCars(true).size(); i++){
+	j = Integer.parseInt(road2.getCars(true).get(i).toString());
 	if (j == 0){System.out.println("There is an amb");}
 }}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
+					<ReturnType><![CDATA[boolean]]></ReturnType>
+					<Id>1618684646676</Id>
+					<Name><![CDATA[hasAmb]]></Name>
+					<X>670</X><Y>360</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[r]]></Name>
+						<Type><![CDATA[Road]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[fwd]]></Name>
+						<Type><![CDATA[boolean]]></Type>
+					</Parameter>
+					<Body><![CDATA[if (r.getCars(fwd).isEmpty()){return false;}
+int j;
+for(int i = 0; i < r.getCars(fwd).size(); i++){
+	j = Integer.parseInt(r.getCars(fwd).get(i).toString());
+	if (j == 0){
+	System.out.println("The priority: " +r.getCars(true));
+	return true;
+	}
+}
+return false;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618686586352</Id>
+					<Name><![CDATA[timeT1]]></Name>
+					<X>560</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[/*if(i1Time[0] == 0 && i1Time[1] == 0 && i1Time[3] == 0 ){
+if (i1Time[2] >= i1[2]){
+i1Time[2] = 0;
+trafficLight1.turnOn();}
+}else{
+i1Time[2]++;
+if( trafficLight1.isOn())
+trafficLight1.turnOff();}
+*/]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618687438958</Id>
+					<Name><![CDATA[function1]]></Name>
+					<X>240</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if(tr1Turn[1] == true){
+	if(i1Time[1] < i1[1]){
+		trafficLight1.turnOff();
+		i1Time[1]++;
+	}
+	else {
+			trafficLight1.turnOn();
+			i1Time[1]=0;
+			tr1Turn[1] = false;
+			tr1Turn[2] = true;
+	}
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618687509184</Id>
+					<Name><![CDATA[function2]]></Name>
+					<X>510</X><Y>260</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if(tr1Turn[2] == true){
+	if(i1Time[2] < i1[2]){
+		trafficLight2.turnOff();
+		i1Time[2]++;
+	}
+	else {
+			trafficLight2.turnOn();
+			i1Time[2]=0;
+			tr1Turn[2] = false;
+			tr1Turn[3] = true;
+	}
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618687512543</Id>
+					<Name><![CDATA[function3]]></Name>
+					<X>510</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if(tr1Turn[3] == true){
+	if(i1Time[3] < i1[3]){
+		trafficLight3.turnOff();
+		i1Time[3]++;
+	}
+	else {
+			trafficLight3.turnOn();
+			i1Time[3]=0;
+			tr1Turn[3] = false;
+			tr1Turn[0] = true;
+	}
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618687515274</Id>
+					<Name><![CDATA[function]]></Name>
+					<X>240</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if(tr1Turn[0] == true){
+	if(i1Time[0] < i1[0]){
+		trafficLight.turnOff();
+		i1Time[0]++;
+	}
+	else {
+			trafficLight.turnOn();
+			i1Time[0]=0;
+			tr1Turn[0] = false;
+			tr1Turn[1] = true;
+	}
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618691116524</Id>
+					<Name><![CDATA[function4]]></Name>
+					<X>810</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if(tr2Turn[1] == true){
+	if(i2Time[1] < i1[1]){
+		trafficLight5.turnOff();
+		i2Time[1]++;
+	}
+	else {
+			trafficLight5.turnOn();
+			i2Time[1]=0;
+			tr2Turn[1] = false;
+			tr2Turn[2] = true;
+	}
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618691120770</Id>
+					<Name><![CDATA[function5]]></Name>
+					<X>880</X><Y>420</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if(tr2Turn[0] == true){
+	if(i2Time[0] < i1[0]){
+		trafficLight4.turnOff();
+		i2Time[0]++;
+	}
+	else {
+			trafficLight4.turnOn();
+			i2Time[0]=0;
+			tr2Turn[0] = false;
+			tr2Turn[1] = true;
+	}
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618691126030</Id>
+					<Name><![CDATA[function6]]></Name>
+					<X>1030</X><Y>390</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if(tr2Turn[2] == true){
+	if(i2Time[2] < i1[2]){
+		trafficLight5.turnOff();
+		i2Time[2]++;
+	}
+	else {
+			trafficLight5.turnOn();
+			i2Time[2]=0;
+			tr2Turn[2] = false;
+			tr2Turn[0] = true;
+	}
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618691772421</Id>
+					<Name><![CDATA[checkAmb1]]></Name>
+					<X>640</X><Y>450</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[if(hasAmb(road,true)){
+	System.out.println("Road has an Amb");
+	openTrafficAmb(trafficLight, road, true);
+}else if(hasAmb(road1,false)){
+	System.out.println("Road1 has an Amb");
+}else if(hasAmb(road2,false)){
+	System.out.println("Road2 has an Amb");
+}else if(hasAmb(road3,false)){
+	System.out.println("Road3 has an Amb");
+}]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618691894365</Id>
+					<Name><![CDATA[openTrafficAmb]]></Name>
+					<X>640</X><Y>470</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[tr]]></Name>
+						<Type><![CDATA[TrafficLight]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[r]]></Name>
+						<Type><![CDATA[Road]]></Type>
+					</Parameter>
+					<Parameter>
+						<Name><![CDATA[fwd]]></Name>
+						<Type><![CDATA[boolean]]></Type>
+					</Parameter>
+					<Body><![CDATA[//save parameters
+
+//open the road for Amb
+tr.turnOff();
+// open till it goes
+while(hasAmb(r,fwd)){
+	System.out.println("there is still an amb");
+}
+tr.turnOn();
+// restore parameters]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -2234,7 +2828,7 @@ for(int i = 0; i < road.getCars(true).size(); i++){
 						<Parameter>
 							<Name><![CDATA[onExit]]></Name>
 							<Value Class="CodeValue">
-								<Code><![CDATA[car.set_priority(0);]]></Code>
+								<Code><![CDATA[car.set_priority(1);]]></Code>
 							</Value>
 						</Parameter>
 					</Parameters>
@@ -4067,15 +4661,31 @@ for(int i = 0; i < road.getCars(true).size(); i++){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[100]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[120]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[5]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[10]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addCarToCustomPopulation]]></Name>
@@ -4277,15 +4887,31 @@ for(int i = 0; i < road.getCars(true).size(); i++){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[100]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[120]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[5]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[10]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addCarToCustomPopulation]]></Name>
@@ -4762,6 +5388,10 @@ for(int i = 0; i < road.getCars(true).size(); i++){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[length]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[9]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
@@ -4971,6 +5601,10 @@ for(int i = 0; i < road.getCars(true).size(); i++){
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[length]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[9]]></Code>
+								<Unit Class="LengthUnits"><![CDATA[METER]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
