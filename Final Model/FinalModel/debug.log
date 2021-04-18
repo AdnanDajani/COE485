@@ -1,3 +1,5 @@
 [0417/024305.782:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
 [0417/030541.322:ERROR:file_io.cc(90)] ReadExactly: expected 40, observed 0
 [0417/031541.348:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0418/224915.940:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[0418/231620.931:ERROR:file_io.cc(90)] ReadExactly: expected 40, observed 0

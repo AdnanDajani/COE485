@@ -2041,7 +2041,8 @@ import org.json.simple.parser.JSONParser;]]></Import>
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road,true)){
 //trafficLight.turnOn();
-tr1Turn[0] = true;
+//tr1Turn[0] = true;
+continue1();
 System.out.println("!!!! Wait activated !!!!");
 waitAmb.reset();
 resetTime1();
@@ -2112,7 +2113,8 @@ waitAmb3.reset();]]></Action>
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road1,false)){
 //trafficLight1.turnOn();
-tr1Turn[1] = true;
+//tr1Turn[1] = true;
+continue1();
 System.out.println("!!!! Wait1 activated !!!!");
 waitAmb1.reset();
 resetTime1();
@@ -2149,7 +2151,8 @@ resetTime1();
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road2,false)){
 //trafficLight2.turnOn();
-tr1Turn[2] = true;
+//tr1Turn[2] = true;
+continue1();
 System.out.println("!!!! Wait2 activated !!!!");
 waitAmb2.reset();
 resetTime1();
@@ -2187,7 +2190,8 @@ resetTime1();
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road3,false)){
 //trafficLight3.turnOn();
-tr1Turn[3] = true;
+//tr1Turn[3] = true;
+continue1();
 System.out.println("!!!! Wait3 activated !!!!");
 waitAmb3.reset();
 resetTime1();
@@ -2225,7 +2229,8 @@ resetTime1();
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road2,true)){
 trafficLight4.turnOn();
-tr2Turn[0] = true;
+//tr2Turn[0] = true;
+continue2();
 System.out.println("!!!! Wait activated4 !!!!");
 waitAmb4.reset();
 }
@@ -2262,7 +2267,8 @@ resetTime2();]]></Action>
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road4,true)){
 trafficLight5.turnOn();
-tr2Turn[1] = true;
+//tr2Turn[1] = true;
+continue2();
 System.out.println("!!!! Wait5 activated !!!!");
 waitAmb5.reset();
 }
@@ -2299,7 +2305,8 @@ resetTime2();]]></Action>
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road5,false)){
 trafficLight6.turnOn();
-tr2Turn[2] = true;
+//tr2Turn[2] = true;
+continue2();
 System.out.println("!!!! Wait6 activated !!!!");
 waitAmb6.reset();
 }
@@ -2931,9 +2938,9 @@ return -1;]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[for(int i =0; i < i1Time.length; i++){
+					<Body><![CDATA[/*for(int i =0; i < i1Time.length; i++){
 	i1Time[i] = 0;
-}]]></Body>
+}*/]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>VOID</ReturnModificator>
@@ -2945,9 +2952,45 @@ return -1;]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[for(int i =0; i < i2Time.length; i++){
+					<Body><![CDATA[/*for(int i =0; i < i2Time.length; i++){
 	i2Time[i] = 0;
-}]]></Body>
+}*/]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618749806442</Id>
+					<Name><![CDATA[continue1]]></Name>
+					<X>240</X><Y>620</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[for(int i = 0; i < i1.length; i++){
+	if(i1[i] != 0){
+		tr1Turn[i] = true;
+		return;
+	}
+}
+tr1Turn[0]=true;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618749948810</Id>
+					<Name><![CDATA[continue2]]></Name>
+					<X>1110</X><Y>470</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Body><![CDATA[for(int i = 0; i < i2.length; i++){
+	if(i2[i] != 0){
+		tr2Turn[i] = true;
+		return;
+	}
+}
+tr2Turn[0] = true;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
