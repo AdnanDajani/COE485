@@ -23,6 +23,20 @@ public int[] i2 = {10,10,10};
 public int[] i1Time= {0,0,0,0};
 public int[] i2Time= {0,0,0};
 
+public int[] carArrGreenInt1= {0,0,0,0};
+public int[] carArrGreenInt2= {0,0,0};
+
+public int[] carArrRedInt1= {0,0,0,0};
+public int[] carArrRedInt2= {0,0,0};
+
+public int[] carDepInt1= {0,0,0,0};
+public int[] carDepInt2= {0,0,0};
+
+public int[] carRemInt1= {0,0,0,0};
+public int[] carRemInt2= {0,0,0};
+
+
+
 public boolean[] tr1Turn = {true, false, false, false};
 public boolean[] tr2Turn = {true, false, false};
 
@@ -135,6 +149,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 				<PresentationFlag>true</PresentationFlag>
 				<ShowLabel>true</ShowLabel>
 				<Type>STOP_LINES</Type>
+				<Junction>1618610023976</Junction>
 				<Line>1618610023996</Line>
 				<Duration Class="CodeValue">
 					<Code><![CDATA[1]]></Code>
@@ -1151,40 +1166,6 @@ import org.json.simple.parser.JSONParser;]]></Import>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1618612561849</Id>
-					<Name><![CDATA[connector27]]></Name>
-					<X>425</X><Y>-560</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[finalmodel]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carSource5]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarSource]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[finalmodel]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[selectOutput5]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[SelectOutput5]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>80</Y></Point>
-						<Point><X>25</X><Y>80</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1618612588701</Id>
 					<Name><![CDATA[connector26]]></Name>
 					<X>415</X><Y>-270</Y>
@@ -1566,6 +1547,74 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						<Point><X>30</X><Y>-110</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1618766728864</Id>
+					<Name><![CDATA[connector27]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carSource5]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarSource]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>760</X><Y>-450</Y></Point>
+						<Point><X>760</X><Y>-410</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1618776132130</Id>
+					<Name><![CDATA[connector38]]></Name>
+					<X>600</X><Y>-60</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carMoveTo7]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarMoveTo]]></ClassName>
+						<ItemName><![CDATA[outWayNotFound]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose1]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>150</X><Y>0</Y></Point>
+						<Point><X>150</X><Y>-130</Y></Point>
+						<Point><X>160</X><Y>-130</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<Events>
 				<Event>
@@ -1597,7 +1646,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[sendFunc1();]]></Action>
+					<Action><![CDATA[//sendFunc1();]]></Action>
 				</Event>
 				<Event>
 					<Id>1618615432589</Id>
@@ -1659,7 +1708,7 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[sendFunc2();]]></Action>
+					<Action><![CDATA[//sendFunc2();]]></Action>
 				</Event>
 				<Event>
 					<Id>1618615482396</Id>
@@ -1910,10 +1959,23 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[System.out.println("Time ellapsed: "+ tr1Turn[0] + " " + tr1Turn[1] + " " + tr1Turn[2] + " " + tr1Turn[3] + " " 
+					<Action><![CDATA[/*System.out.println("Time ellapsed: "+ tr1Turn[0] + " " + tr1Turn[1] + " " + tr1Turn[2] + " " + tr1Turn[3] + " " 
 + i1Time[0]+ " " + i1Time[1]+ " " + i1Time[2]+ " " + i1Time[3]
 + " | | " + tr2Turn[0]+ " " + tr2Turn[1]+ " " + tr2Turn[2]+ " "
-+ i2Time[0] + " " + i2Time[1] + " " + i2Time[2] );]]></Action>
++ i2Time[0] + " " + i2Time[1] + " " + i2Time[2] );
+*/
+System.out.print("arrive green1 ");
+for(int i =0; i<carArrGreenInt1.length; i++){System.out.print(carArrGreenInt1[i] + " ");}
+System.out.println();
+System.out.print("arrive red1 ");
+for(int i =0; i<carArrRedInt1.length; i++){System.out.print(carArrRedInt1[i] + " ");}
+System.out.println();
+System.out.print("arrive green2 ");
+for(int i =0; i<carArrGreenInt2.length; i++){System.out.print(carArrGreenInt2[i] + " ");}
+System.out.println();
+System.out.print("arrive red2 ");
+for(int i =0; i<carArrRedInt2.length; i++){System.out.print(carArrRedInt2[i] + " ");}
+System.out.println("\n");]]></Action>
 				</Event>
 				<Event>
 					<Id>1618691116528</Id>
@@ -2040,10 +2102,10 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						<Condition><![CDATA[!hasAmb(road,true)]]></Condition>
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road,true)){
-//trafficLight.turnOn();
+trafficLight.turnOn();
 //tr1Turn[0] = true;
 continue1();
-System.out.println("!!!! Wait activated !!!!");
+//System.out.println("!!!! Wait activated !!!!");
 waitAmb.reset();
 resetTime1();
 }]]></Action>
@@ -2112,10 +2174,10 @@ waitAmb3.reset();]]></Action>
 						<Condition><![CDATA[!hasAmb(road1,false)]]></Condition>
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road1,false)){
-//trafficLight1.turnOn();
+trafficLight1.turnOn();
 //tr1Turn[1] = true;
 continue1();
-System.out.println("!!!! Wait1 activated !!!!");
+//System.out.println("!!!! Wait1 activated !!!!");
 waitAmb1.reset();
 resetTime1();
 }]]></Action>
@@ -2150,10 +2212,10 @@ resetTime1();
 						<Condition><![CDATA[!hasAmb(road2,false)]]></Condition>
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road2,false)){
-//trafficLight2.turnOn();
+trafficLight2.turnOn();
 //tr1Turn[2] = true;
 continue1();
-System.out.println("!!!! Wait2 activated !!!!");
+//System.out.println("!!!! Wait2 activated !!!!");
 waitAmb2.reset();
 resetTime1();
 }
@@ -2189,10 +2251,10 @@ resetTime1();
 						<Condition><![CDATA[!hasAmb(road3,false)]]></Condition>
 					</Properties>
 					<Action><![CDATA[if(!hasAmb(road3,false)){
-//trafficLight3.turnOn();
+trafficLight3.turnOn();
 //tr1Turn[3] = true;
 continue1();
-System.out.println("!!!! Wait3 activated !!!!");
+//System.out.println("!!!! Wait3 activated !!!!");
 waitAmb3.reset();
 resetTime1();
 }
@@ -2231,7 +2293,7 @@ resetTime1();
 trafficLight4.turnOn();
 //tr2Turn[0] = true;
 continue2();
-System.out.println("!!!! Wait activated4 !!!!");
+//System.out.println("!!!! Wait activated4 !!!!");
 waitAmb4.reset();
 }
 resetTime2();]]></Action>
@@ -2269,7 +2331,7 @@ resetTime2();]]></Action>
 trafficLight5.turnOn();
 //tr2Turn[1] = true;
 continue2();
-System.out.println("!!!! Wait5 activated !!!!");
+//System.out.println("!!!! Wait5 activated !!!!");
 waitAmb5.reset();
 }
 resetTime2();]]></Action>
@@ -2307,7 +2369,7 @@ resetTime2();]]></Action>
 trafficLight6.turnOn();
 //tr2Turn[2] = true;
 continue2();
-System.out.println("!!!! Wait6 activated !!!!");
+//System.out.println("!!!! Wait6 activated !!!!");
 waitAmb6.reset();
 }
 resetTime2();]]></Action>
@@ -2758,7 +2820,7 @@ tr1Turn[0]= false;
 	tr1Turn[1]= false;
 	tr1Turn[2]= false;
 	tr1Turn[3]= false;
-	System.out.println("Road has an Amb");
+	//System.out.println("Road has an Amb");
 	trafficLight1.turnOn();
 	trafficLight2.turnOn();
 	trafficLight3.turnOn();
@@ -2768,7 +2830,7 @@ tr1Turn[0]= false;
 	tr1Turn[1]= false;
 	tr1Turn[2]= false;
 	tr1Turn[3]= false;
-	System.out.println("Road1 has an Amb");
+	//System.out.println("Road1 has an Amb");
 	trafficLight.turnOn();
 	trafficLight2.turnOn();
 	trafficLight3.turnOn();
@@ -2778,7 +2840,7 @@ tr1Turn[0]= false;
 	tr1Turn[1]= false;
 	tr1Turn[2]= false;
 	tr1Turn[3]= false;
-	System.out.println("Road2 has an Amb");
+	//System.out.println("Road2 has an Amb");
 	trafficLight1.turnOn();
 	trafficLight.turnOn();
 	trafficLight3.turnOn();
@@ -2788,7 +2850,7 @@ tr1Turn[0]= false;
 	tr1Turn[1]= false;
 	tr1Turn[2]= false;
 	tr1Turn[3]= false;
-	System.out.println("Road3 has an Amb");
+	//System.out.println("Road3 has an Amb");
 	trafficLight1.turnOn();
 	trafficLight2.turnOn();
 	trafficLight.turnOn();
@@ -2829,10 +2891,10 @@ tr1Turn[index] = false;
 System.out.println("The index = " + index);
 // open till it goes
 switch(index){
-case 0: waitAmb.restart(); System.out.println("### Wait activated yes ###"); break;
-case 1: waitAmb1.restart(); System.out.println("### Wait1 activated yes ###"); break;
-case 2: waitAmb2.restart(); System.out.println("### Wait2 activated yes ###"); break;
-case 3: waitAmb3.restart(); System.out.println("### Wait3 activated yes ###"); break;
+case 0: waitAmb.restart(); break;
+case 1: waitAmb1.restart(); break;
+case 2: waitAmb2.restart(); break;
+case 3: waitAmb3.restart(); break;
 }
 // restore parameters]]></Body>
 				</Function>
@@ -2847,7 +2909,7 @@ case 3: waitAmb3.restart(); System.out.println("### Wait3 activated yes ###"); b
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Body><![CDATA[if(hasAmb(road2,true)){
-	System.out.println("Road2 has an Amb");
+	//System.out.println("Road2 has an Amb");
 	tr2Turn[0]= false;
 	tr2Turn[1]= false;
 	tr2Turn[2]= false;
@@ -2858,7 +2920,7 @@ case 3: waitAmb3.restart(); System.out.println("### Wait3 activated yes ###"); b
 tr2Turn[0]= false;
 	tr2Turn[1]= false;
 	tr2Turn[2]= false;
-	System.out.println("Road4 has an Amb");
+	//System.out.println("Road4 has an Amb");
 	trafficLight4.turnOn();
 	trafficLight6.turnOn();
 	openTrafficAmb2(trafficLight5, road4, true, 1);
@@ -2868,7 +2930,7 @@ tr2Turn[0]= false;
 	tr2Turn[2]= false;
 	//int j = index2();
 //	tr2Turn[j] = false;
-	System.out.println("Road5 has an Amb");
+	//System.out.println("Road5 has an Amb");
 	trafficLight4.turnOn();
 	trafficLight5.turnOn();
 	openTrafficAmb2(trafficLight6, road5, false, 2);
@@ -2907,26 +2969,11 @@ tr.turnOff();
 tr2Turn[index] = false;
 // open till it goes
 switch(index){
-case 0: waitAmb4.restart(); System.out.println("### Wait4 activated yes ###"); break;
-case 1: waitAmb5.restart(); System.out.println("### Wait5 activated yes ###"); break;
-case 2: waitAmb6.restart(); System.out.println("### Wait6 activated yes ###"); break;
+case 0: waitAmb4.restart(); break;
+case 1: waitAmb5.restart(); break;
+case 2: waitAmb6.restart(); break;
 }
 // restore parameters]]></Body>
-				</Function>
-				<Function AccessType="default" StaticFunction="false">
-					<ReturnModificator>RETURNS_VALUE</ReturnModificator>
-					<ReturnType><![CDATA[int]]></ReturnType>
-					<Id>1618704389448</Id>
-					<Name><![CDATA[index2]]></Name>
-					<X>1230</X><Y>490</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[for (int i = 0; i < tr2Turn.length; i++){
-	if(tr2Turn[i]==true){return i;}
-}
-return -1;]]></Body>
 				</Function>
 				<Function AccessType="default" StaticFunction="false">
 					<ReturnModificator>VOID</ReturnModificator>
@@ -2966,8 +3013,8 @@ return -1;]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[for(int i = 0; i < i1.length; i++){
-	if(i1[i] != 0){
+					<Body><![CDATA[for(int i = 0; i < i1Time.length; i++){
+	if(i1Time[i] != 0){
 		tr1Turn[i] = true;
 		return;
 	}
@@ -2984,13 +3031,89 @@ tr1Turn[0]=true;]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[for(int i = 0; i < i2.length; i++){
-	if(i2[i] != 0){
+					<Body><![CDATA[for(int i = 0; i < i2Time.length; i++){
+	if(i2Time[i] != 0){
 		tr2Turn[i] = true;
 		return;
 	}
 }
 tr2Turn[0] = true;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618776927483</Id>
+					<Name><![CDATA[updateData2]]></Name>
+					<X>680</X><Y>700</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[index]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Body><![CDATA[switch(index){
+case 0:
+	if(trafficLight4.isOn()){carArrRedInt2[0]++;}
+	else{carArrGreenInt2[0]++;}
+	break;
+case 1:
+	if(trafficLight5.isOn()){carArrRedInt2[1]++;}
+	else{carArrGreenInt2[1]++;}
+	break;
+case 2:
+	if(trafficLight6.isOn()){carArrRedInt2[2]++;}
+	else{carArrGreenInt2[2]++;}
+	break;
+	
+}
+carRemInt2[index]++;]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618777981705</Id>
+					<Name><![CDATA[updateData1]]></Name>
+					<X>680</X><Y>680</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[index]]></Name>
+						<Type><![CDATA[int]]></Type>
+					</Parameter>
+					<Body><![CDATA[/*
+public int[] carArrGreenInt1= {0,0,0,0};
+public int[] carArrGreenInt2= {0,0,0};
+public int[] carArrRedInt1= {0,0,0,0};
+public int[] carArrRedInt2= {0,0,0};
+public int[] carDepInt1= {0,0,0,0};
+public int[] carDepInt2= {0,0,0};
+public int[] carRemInt1= {0,0,0,0};
+public int[] carRemInt2= {0,0,0};
+*/
+switch(index){
+case 0:
+	if(trafficLight.isOn()){carArrRedInt1[0]++;}
+	else{carArrGreenInt1[0]++;}
+	break;
+case 1:
+	if(trafficLight1.isOn()){carArrRedInt1[1]++;}
+	else{carArrGreenInt1[1]++;}
+	break;
+case 2:
+	if(trafficLight2.isOn()){carArrRedInt1[2]++;}
+	else{carArrGreenInt1[2]++;}
+	break;
+case 3:
+	if(trafficLight3.isOn()){carArrRedInt1[3]++;}
+	else{carArrGreenInt1[3]++;}
+	break;
+	
+}
+carRemInt1[index]++;]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
@@ -5076,7 +5199,7 @@ tr2Turn[0] = true;]]></Body>
 				<EmbeddedObject>
 					<Id>1618612512043</Id>
 					<Name><![CDATA[carSource5]]></Name>
-					<X>395</X><Y>-560</Y>
+					<X>730</X><Y>-450</Y>
 					<Label><X>-15</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5325,7 +5448,7 @@ tr2Turn[0] = true;]]></Body>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
 							<Value Class="CodeUnitValue">
-								<Code><![CDATA[200]]></Code>
+								<Code><![CDATA[500]]></Code>
 								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
 							</Value>
 						</Parameter>
@@ -6338,6 +6461,90 @@ tr2Turn[0] = true;]]></Body>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[carRemInt1[0]--;
+carDepInt1[0]++;]]></Code>
+								</Value>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1618777608409</Id>
+					<Name><![CDATA[stopLine12]]></Name>
+					<X>179</X><Y>328</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>180.0</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[updateData1(0);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -6396,48 +6603,6 @@ tr2Turn[0] = true;]]></Body>
 					<FakeNode>false</FakeNode>
 
 			<Presentation>
-				<LaneConnector SourceId="1618610016041" TargetId="1618610016041">
-					<Id>1618610023979</Id>
-					<Name><![CDATA[laneConnector1]]></Name>
-					<X>393</X><Y>262.6666666666667</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>10</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1618610016041" TargetId="1618610016041">
-					<Id>1618610023980</Id>
-					<Name><![CDATA[laneConnector2]]></Name>
-					<X>393</X><Y>262.6666666666667</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>14</X><Y>0</Y></Point>
-						<Point><X>14</X><Y>10</Y></Point>
-						<Point><X>7</X><Y>37.333333333333314</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
 				<LaneConnector SourceId="1618610016041" TargetId="1618609993118">
 					<Id>1618610023981</Id>
 					<Name><![CDATA[laneConnector3]]></Name>
@@ -6549,48 +6714,6 @@ tr2Turn[0] = true;]]></Body>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
 				</LaneConnector>
-				<LaneConnector SourceId="1618609993118" TargetId="1618609993118">
-					<Id>1618610023986</Id>
-					<Name><![CDATA[laneConnector8]]></Name>
-					<X>362.6666666666667</X><Y>307</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333333333333314</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-28</Y></Point>
-						<Point><X>10</X><Y>-28</Y></Point>
-						<Point><X>37.333333333333314</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1618609993118" TargetId="1618609993118">
-					<Id>1618610023987</Id>
-					<Name><![CDATA[laneConnector9]]></Name>
-					<X>362.6666666666667</X><Y>307</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333333333333314</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-14</Y></Point>
-						<Point><X>10</X><Y>-14</Y></Point>
-						<Point><X>37.333333333333314</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
 				<LaneConnector SourceId="1618609993118" TargetId="1618610023978">
 					<Id>1618610023988</Id>
 					<Name><![CDATA[laneConnector10]]></Name>
@@ -6691,48 +6814,6 @@ tr2Turn[0] = true;]]></Body>
 						<Point><X>-10</X><Y>0</Y></Point>
 						<Point><X>-74.66666666666663</X><Y>0</Y></Point>
 						<Point><X>-64.66666666666663</X><Y>0</Y></Point>
-						<Point><X>-37.333333333333314</X><Y>7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1618610023978" TargetId="1618610023978">
-					<Id>1618610023993</Id>
-					<Name><![CDATA[laneConnector15]]></Name>
-					<X>437.3333333333333</X><Y>293</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-37.333333333333314</X><Y>7</Y></Point>
-						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>28</Y></Point>
-						<Point><X>-10</X><Y>28</Y></Point>
-						<Point><X>-37.333333333333314</X><Y>7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1618610023978" TargetId="1618610023978">
-					<Id>1618610023994</Id>
-					<Name><![CDATA[laneConnector16]]></Name>
-					<X>437.3333333333333</X><Y>293</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-37.333333333333314</X><Y>7</Y></Point>
-						<Point><X>-10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>14</Y></Point>
-						<Point><X>-10</X><Y>14</Y></Point>
 						<Point><X>-37.333333333333314</X><Y>7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
@@ -6894,48 +6975,6 @@ tr2Turn[0] = true;]]></Body>
 					<SourceLane>0</SourceLane>
 					<TargetLane>0</TargetLane>
 				</LaneConnector>
-				<LaneConnector SourceId="1618610029805" TargetId="1618610029805">
-					<Id>1618610034583</Id>
-					<Name><![CDATA[laneConnector24]]></Name>
-					<X>407</X><Y>340</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-7</X><Y>-40</Y></Point>
-						<Point><X>0</X><Y>-10</Y></Point>
-						<Point><X>-28</X><Y>0</Y></Point>
-						<Point><X>-28</X><Y>-10</Y></Point>
-						<Point><X>-7</X><Y>-40</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1618610029805" TargetId="1618610029805">
-					<Id>1618610034584</Id>
-					<Name><![CDATA[laneConnector25]]></Name>
-					<X>407</X><Y>340</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>-7</X><Y>-40</Y></Point>
-						<Point><X>0</X><Y>-10</Y></Point>
-						<Point><X>-14</X><Y>0</Y></Point>
-						<Point><X>-14</X><Y>-10</Y></Point>
-						<Point><X>-7</X><Y>-40</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
 				<LaneConnector SourceId="1618610029805" TargetId="1618610023978">
 					<Id>1618610034585</Id>
 					<Name><![CDATA[laneConnector26]]></Name>
@@ -7004,6 +7043,132 @@ tr2Turn[0] = true;]]></Body>
 						<Point><X>-44.333333333333314</X><Y>47</Y></Point>
 						<Point><X>-44.333333333333314</X><Y>47</Y></Point>
 						<Point><X>-37.333333333333314</X><Y>7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618610029805" TargetId="1618610029805">
+					<Id>1618776145731</Id>
+					<Name><![CDATA[laneConnector16]]></Name>
+					<X>407</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-7</X><Y>-40</Y></Point>
+						<Point><X>0</X><Y>-10</Y></Point>
+						<Point><X>-28</X><Y>0</Y></Point>
+						<Point><X>-28</X><Y>-10</Y></Point>
+						<Point><X>-7</X><Y>-40</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618610029805" TargetId="1618610029805">
+					<Id>1618776145732</Id>
+					<Name><![CDATA[laneConnector24]]></Name>
+					<X>407</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>-7</X><Y>-40</Y></Point>
+						<Point><X>0</X><Y>-10</Y></Point>
+						<Point><X>-14</X><Y>0</Y></Point>
+						<Point><X>-14</X><Y>-10</Y></Point>
+						<Point><X>-7</X><Y>-40</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618609993118" TargetId="1618609993118">
+					<Id>1618776148734</Id>
+					<Name><![CDATA[laneConnector25]]></Name>
+					<X>362.6666666666667</X><Y>307</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333333333333314</X><Y>-7</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-14</Y></Point>
+						<Point><X>10</X><Y>-14</Y></Point>
+						<Point><X>37.333333333333314</X><Y>-7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618609993118" TargetId="1618609993118">
+					<Id>1618776148733</Id>
+					<Name><![CDATA[laneConnector29]]></Name>
+					<X>362.6666666666667</X><Y>307</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333333333333314</X><Y>-7</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-28</Y></Point>
+						<Point><X>10</X><Y>-28</Y></Point>
+						<Point><X>37.333333333333314</X><Y>-7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618610016041" TargetId="1618610016041">
+					<Id>1618776150964</Id>
+					<Name><![CDATA[laneConnector30]]></Name>
+					<X>393</X><Y>262.6666666666667</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>28</X><Y>10</Y></Point>
+						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618610016041" TargetId="1618610016041">
+					<Id>1618776150965</Id>
+					<Name><![CDATA[laneConnector36]]></Name>
+					<X>393</X><Y>262.6666666666667</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7</X><Y>37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>14</X><Y>0</Y></Point>
+						<Point><X>14</X><Y>10</Y></Point>
+						<Point><X>7</X><Y>37.333333333333314</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
@@ -7079,6 +7244,90 @@ tr2Turn[0] = true;]]></Body>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[carRemInt1[1]--;
+carDepInt1[1]++;]]></Code>
+								</Value>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1618777603017</Id>
+					<Name><![CDATA[stopLine11]]></Name>
+					<X>371</X><Y>80.667</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>180.0</Offset>
+					<OnForwardSide>false</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[updateData1(1);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -7189,6 +7438,10 @@ tr2Turn[0] = true;]]></Body>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[carRemInt1[2]--;
+carDepInt1[2]++;]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -7267,6 +7520,170 @@ tr2Turn[0] = true;]]></Body>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[carRemInt2[0]--;
+carDepInt2[0]++;]]></Code>
+								</Value>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1618777592168</Id>
+					<Name><![CDATA[stopLine8]]></Name>
+					<X>754.333</X><Y>327</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>320.0</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[updateData2(0);]]></Code>
+								</Value>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1618777598369</Id>
+					<Name><![CDATA[stopLine10]]></Name>
+					<X>616.333</X><Y>266</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>180.0</Offset>
+					<OnForwardSide>false</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[updateData1(2);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -7380,6 +7797,90 @@ tr2Turn[0] = true;]]></Body>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[carRemInt1[3]--;
+carDepInt1[3]++;]]></Code>
+								</Value>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1618777624278</Id>
+					<Name><![CDATA[stopLine13]]></Name>
+					<X>435</X><Y>495</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>160.0</Offset>
+					<OnForwardSide>false</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[updateData1(3);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -7438,48 +7939,6 @@ tr2Turn[0] = true;]]></Body>
 					<FakeNode>false</FakeNode>
 
 			<Presentation>
-				<LaneConnector SourceId="1618610187880" TargetId="1618610187880">
-					<Id>1618610206806</Id>
-					<Name><![CDATA[laneConnector29]]></Name>
-					<X>963</X><Y>262.6666666666667</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7.000333333333401</X><Y>37.333333333333314</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>28</X><Y>0</Y></Point>
-						<Point><X>28</X><Y>10</Y></Point>
-						<Point><X>7.000333333333401</X><Y>37.333333333333314</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1618610187880" TargetId="1618610187880">
-					<Id>1618610206807</Id>
-					<Name><![CDATA[laneConnector30]]></Name>
-					<X>963</X><Y>262.6666666666667</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>7.000333333333401</X><Y>37.333333333333314</Y></Point>
-						<Point><X>0</X><Y>10</Y></Point>
-						<Point><X>14</X><Y>0</Y></Point>
-						<Point><X>14</X><Y>10</Y></Point>
-						<Point><X>7.000333333333401</X><Y>37.333333333333314</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
 				<LaneConnector SourceId="1618610187880" TargetId="1618610023978">
 					<Id>1618610206808</Id>
 					<Name><![CDATA[laneConnector31]]></Name>
@@ -7589,48 +8048,6 @@ tr2Turn[0] = true;]]></Body>
 						<Point><X>44.333000000000084</X><Y>-44.33300000000003</Y></Point>
 						<Point><X>44.333000000000084</X><Y>-44.333333333333314</Y></Point>
 						<Point><X>44.333000000000084</X><Y>-44.333333333333314</Y></Point>
-						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>1</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1618610023978" TargetId="1618610023978">
-					<Id>1618610206813</Id>
-					<Name><![CDATA[laneConnector36]]></Name>
-					<X>932.6669999999999</X><Y>307</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-28</Y></Point>
-						<Point><X>10</X><Y>-28</Y></Point>
-						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
-					</Points>
-					<SourceLane>1</SourceLane>
-					<TargetLane>0</TargetLane>
-				</LaneConnector>
-				<LaneConnector SourceId="1618610023978" TargetId="1618610023978">
-					<Id>1618610206814</Id>
-					<Name><![CDATA[laneConnector37]]></Name>
-					<X>932.6669999999999</X><Y>307</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>true</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
-					<Z>0</Z>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
-						<Point><X>10</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-14</Y></Point>
-						<Point><X>10</X><Y>-14</Y></Point>
 						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
 					</Points>
 					<SourceLane>1</SourceLane>
@@ -7750,9 +8167,93 @@ tr2Turn[0] = true;]]></Body>
 					<SourceLane>1</SourceLane>
 					<TargetLane>1</TargetLane>
 				</LaneConnector>
+				<LaneConnector SourceId="1618610187880" TargetId="1618610187880">
+					<Id>1618775949135</Id>
+					<Name><![CDATA[laneConnector2]]></Name>
+					<X>963</X><Y>262.6666666666667</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7.000333333333401</X><Y>37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>14</X><Y>0</Y></Point>
+						<Point><X>14</X><Y>10</Y></Point>
+						<Point><X>7.000333333333401</X><Y>37.333333333333314</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618610187880" TargetId="1618610187880">
+					<Id>1618775951241</Id>
+					<Name><![CDATA[laneConnector8]]></Name>
+					<X>963</X><Y>262.6666666666667</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>7.000333333333401</X><Y>37.333333333333314</Y></Point>
+						<Point><X>0</X><Y>10</Y></Point>
+						<Point><X>28</X><Y>0</Y></Point>
+						<Point><X>28</X><Y>10</Y></Point>
+						<Point><X>7.000333333333401</X><Y>37.333333333333314</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618610023978" TargetId="1618610023978">
+					<Id>1618775954853</Id>
+					<Name><![CDATA[laneConnector9]]></Name>
+					<X>932.6669999999999</X><Y>307</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-28</Y></Point>
+						<Point><X>10</X><Y>-28</Y></Point>
+						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>0</TargetLane>
+				</LaneConnector>
+				<LaneConnector SourceId="1618610023978" TargetId="1618610023978">
+					<Id>1618775954854</Id>
+					<Name><![CDATA[laneConnector15]]></Name>
+					<X>932.6669999999999</X><Y>307</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Z>0</Z>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
+						<Point><X>10</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>-14</Y></Point>
+						<Point><X>10</X><Y>-14</Y></Point>
+						<Point><X>37.333333333333485</X><Y>-7</Y></Point>
+					</Points>
+					<SourceLane>1</SourceLane>
+					<TargetLane>1</TargetLane>
+				</LaneConnector>
 				<LaneConnector SourceId="1618610206804" TargetId="1618610206804">
-					<Id>1618610206820</Id>
-					<Name><![CDATA[laneConnector43]]></Name>
+					<Id>1618776138204</Id>
+					<Name><![CDATA[laneConnector]]></Name>
 					<X>977</X><Y>337.3333333333333</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -7772,8 +8273,8 @@ tr2Turn[0] = true;]]></Body>
 					<TargetLane>0</TargetLane>
 				</LaneConnector>
 				<LaneConnector SourceId="1618610206804" TargetId="1618610206804">
-					<Id>1618610206821</Id>
-					<Name><![CDATA[laneConnector44]]></Name>
+					<Id>1618776138205</Id>
+					<Name><![CDATA[laneConnector1]]></Name>
 					<X>977</X><Y>337.3333333333333</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>true</PublicFlag>
@@ -7860,6 +8361,90 @@ tr2Turn[0] = true;]]></Body>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[carRemInt2[1]--;
+carDepInt2[1]++;]]></Code>
+								</Value>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1618777536327</Id>
+					<Name><![CDATA[stopLine9]]></Name>
+					<X>943</X><Y>88</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>90.0</Offset>
+					<OnForwardSide>true</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[updateData2(1);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
@@ -7973,6 +8558,90 @@ tr2Turn[0] = true;]]></Body>
 						<Parameters>
 							<Parameter>
 								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[carRemInt2[2]--;
+carDepInt2[2]++;]]></Code>
+								</Value>
+							</Parameter>
+						</Parameters>
+						<ReplicationFlag>false</ReplicationFlag>
+						<Replication Class="CodeValue">
+							<Code><![CDATA[100]]></Code>
+						</Replication>
+						<CollectionType>ARRAY_LIST_BASED</CollectionType>
+						<InitialLocationType>AT_ANIMATION_POSITION</InitialLocationType>
+						<XCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</XCode>
+						<YCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</YCode>
+						<ZCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ZCode>
+						<ColumnCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</ColumnCode>
+						<RowCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</RowCode>
+						<LatitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LatitudeCode>
+						<LongitudeCode Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</LongitudeCode>
+						<LocationNameCode Class="CodeValue">
+							<Code><![CDATA[""]]></Code>
+						</LocationNameCode>
+						<InitializationType>SPECIFIED_NUMBER</InitializationType>
+						<InitializationDatabaseTableQuery>
+							<TableReference>
+							</TableReference>
+						</InitializationDatabaseTableQuery>
+						<InitializationDatabaseType>ONE_AGENT_PER_DATABASE_RECORD</InitializationDatabaseType>
+						<QuantityColumn>
+						</QuantityColumn>
+					</EmbeddedObject>
+				</RoadStopline>
+				<RoadStopline>
+					<Id>1618774480446</Id>
+					<Name><![CDATA[stopLine7]]></Name>
+					<X>998</X><Y>505.333</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D3D</DrawMode>
+					<Offset>170.0</Offset>
+					<OnForwardSide>false</OnForwardSide>
+					<LeftLane>2</LeftLane>
+					<RightLane>0</RightLane>
+					<StartSpeedLimitSign>false</StartSpeedLimitSign>
+					<SpeedLimitValue Class="UnitValue">
+						<Value Class="Double">40</Value>
+						<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+					</SpeedLimitValue>
+					<YieldSign>false</YieldSign>
+					<EndOfSpeedLimitSign>false</EndOfSpeedLimitSign>
+					<EmbeddedObject>
+						<ActiveObjectClass>
+							<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+							<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+						</ActiveObjectClass>
+						<GenericParameterSubstitute>
+							<GenericParameterSubstituteReference>
+								<PackageName><![CDATA[com.anylogic.libraries.modules.markup_descriptors]]></PackageName>
+								<ClassName><![CDATA[StopLineDescriptor]]></ClassName>
+								<ItemName><![CDATA[1587667461380]]></ItemName>
+							</GenericParameterSubstituteReference>
+						</GenericParameterSubstitute>
+						<Parameters>
+							<Parameter>
+								<Name><![CDATA[onCarPassed]]></Name>
+								<Value Class="CodeValue">
+									<Code><![CDATA[updateData2(2);]]></Code>
+								</Value>
 							</Parameter>
 						</Parameters>
 						<ReplicationFlag>false</ReplicationFlag>
