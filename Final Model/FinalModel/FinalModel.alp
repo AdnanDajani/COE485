@@ -44,10 +44,8 @@ MqttClient client;]]></AdditionalClassCode>
 			<ClientAreaTopLeft><X>0</X><Y>0</Y></ClientAreaTopLeft>
 			<Import><![CDATA[import org.eclipse.paho.client.mqttv3.*;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
-import org.json.simple.parser.ParseException;
-import org.json.simple.parser.JSONParser;]]></Import>
+import org.json.JSONArray;
+import org.json.JSONObject;]]></Import>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1618609451994</Id>
@@ -168,15 +166,10 @@ import org.json.simple.parser.JSONParser;]]></Import>
 				<Type>STOP_LINES</Type>
 				<Line>1618610023997</Line>
 				<Duration Class="CodeValue">
-					<Code><![CDATA[200]]></Code>
+					<Code><![CDATA[1]]></Code>
 				</Duration>
-				<Duration Class="CodeValue">
-					<Code><![CDATA[i1[2]]]></Code>
-				</Duration>
-				<DefaultState>RED</DefaultState>
 				<DefaultState>RED</DefaultState>
 				<State>RED</State>
-				<State>GREEN</State>
 			</TrafficLight>
 			<TrafficLight>
 				<Id>1618683426461</Id>
@@ -1166,40 +1159,6 @@ import org.json.simple.parser.JSONParser;]]></Import>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1618612588701</Id>
-					<Name><![CDATA[connector26]]></Name>
-					<X>415</X><Y>-270</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[finalmodel]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carSource6]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarSource]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[finalmodel]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[selectOutput6]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[SelectOutput5]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>50</Y></Point>
-						<Point><X>35</X><Y>50</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1618614750919</Id>
 					<Name><![CDATA[connector31]]></Name>
 					<X>470</X><Y>-140</Y>
@@ -1480,74 +1439,6 @@ import org.json.simple.parser.JSONParser;]]></Import>
 					</Points>
 				</Connector>
 				<Connector>
-					<Id>1618623818746</Id>
-					<Name><![CDATA[connector36]]></Name>
-					<X>430</X><Y>-370</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[finalmodel]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carSource7]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarSource]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[finalmodel]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[selectOutput5]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[SelectOutput5]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-110</Y></Point>
-						<Point><X>20</X><Y>-110</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
-					<Id>1618623852970</Id>
-					<Name><![CDATA[connector37]]></Name>
-					<X>420</X><Y>-110</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>false</ShowLabel>
-					<SourceEmbeddedObjectReference>
-						<PackageName><![CDATA[finalmodel]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[carSource8]]></ItemName>
-					</SourceEmbeddedObjectReference>
-					<SourceConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
-						<ClassName><![CDATA[CarSource]]></ClassName>
-						<ItemName><![CDATA[out]]></ItemName>
-					</SourceConnectableItemReference>
-					<TargetEmbeddedObjectReference>
-						<PackageName><![CDATA[finalmodel]]></PackageName>
-						<ClassName><![CDATA[Main]]></ClassName>
-						<ItemName><![CDATA[selectOutput6]]></ItemName>
-					</TargetEmbeddedObjectReference>
-					<TargetConnectableItemReference>
-						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
-						<ClassName><![CDATA[SelectOutput5]]></ClassName>
-						<ItemName><![CDATA[in]]></ItemName>
-					</TargetConnectableItemReference>
-					<Points>
-						<Point><X>0</X><Y>0</Y></Point>
-						<Point><X>0</X><Y>-110</Y></Point>
-						<Point><X>30</X><Y>-110</Y></Point>
-					</Points>
-				</Connector>
-				<Connector>
 					<Id>1618766728864</Id>
 					<Name><![CDATA[connector27]]></Name>
 					<X>0</X><Y>0</Y>
@@ -1615,6 +1506,106 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						<Point><X>160</X><Y>-130</Y></Point>
 					</Points>
 				</Connector>
+				<Connector>
+					<Id>1618792176275</Id>
+					<Name><![CDATA[connector26]]></Name>
+					<X>420</X><Y>-290</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carSource6]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarSource]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[selectOutput6]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.processmodeling]]></PackageName>
+						<ClassName><![CDATA[SelectOutput5]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>0</X><Y>0</Y></Point>
+						<Point><X>0</X><Y>70</Y></Point>
+						<Point><X>30</X><Y>70</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1618792391330</Id>
+					<Name><![CDATA[connector36]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carSource7]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarSource]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>790</X><Y>-350</Y></Point>
+						<Point><X>760</X><Y>-410</Y></Point>
+					</Points>
+				</Connector>
+				<Connector>
+					<Id>1618792398166</Id>
+					<Name><![CDATA[connector37]]></Name>
+					<X>0</X><Y>0</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<SourceEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carSource8]]></ItemName>
+					</SourceEmbeddedObjectReference>
+					<SourceConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarSource]]></ClassName>
+						<ItemName><![CDATA[out]]></ItemName>
+					</SourceConnectableItemReference>
+					<TargetEmbeddedObjectReference>
+						<PackageName><![CDATA[finalmodel]]></PackageName>
+						<ClassName><![CDATA[Main]]></ClassName>
+						<ItemName><![CDATA[carDispose1]]></ItemName>
+					</TargetEmbeddedObjectReference>
+					<TargetConnectableItemReference>
+						<PackageName><![CDATA[com.anylogic.libraries.road]]></PackageName>
+						<ClassName><![CDATA[CarDispose]]></ClassName>
+						<ItemName><![CDATA[in]]></ItemName>
+					</TargetConnectableItemReference>
+					<Points>
+						<Point><X>770</X><Y>-150</Y></Point>
+						<Point><X>760</X><Y>-190</Y></Point>
+					</Points>
+				</Connector>
 			</Connectors>
 			<Events>
 				<Event>
@@ -1637,16 +1628,16 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1618473600000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[1]]></Code>
+							<Code><![CDATA[0]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[//sendFunc1();]]></Action>
+					<Action><![CDATA[sendFunc1();]]></Action>
 				</Event>
 				<Event>
 					<Id>1618615432589</Id>
@@ -1699,16 +1690,16 @@ import org.json.simple.parser.JSONParser;]]></Import>
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1618473600000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[5]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
 							<Code><![CDATA[1]]></Code>
-							<Unit Class="TimeUnits"><![CDATA[MINUTE]]></Unit>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[//sendFunc2();]]></Action>
+					<Action><![CDATA[sendFunc2();]]></Action>
 				</Event>
 				<Event>
 					<Id>1618615482396</Id>
@@ -1964,6 +1955,9 @@ import org.json.simple.parser.JSONParser;]]></Import>
 + " | | " + tr2Turn[0]+ " " + tr2Turn[1]+ " " + tr2Turn[2]+ " "
 + i2Time[0] + " " + i2Time[1] + " " + i2Time[2] );
 */
+printArray(i1);
+printArray(i2);
+/*
 System.out.print("arrive green1 ");
 for(int i =0; i<carArrGreenInt1.length; i++){System.out.print(carArrGreenInt1[i] + " ");}
 System.out.println();
@@ -1975,7 +1969,7 @@ for(int i =0; i<carArrGreenInt2.length; i++){System.out.print(carArrGreenInt2[i]
 System.out.println();
 System.out.print("arrive red2 ");
 for(int i =0; i<carArrRedInt2.length; i++){System.out.print(carArrRedInt2[i] + " ");}
-System.out.println("\n");]]></Action>
+System.out.println("\n");*/]]></Action>
 				</Event>
 				<Event>
 					<Id>1618691116528</Id>
@@ -2438,6 +2432,36 @@ resetTime2();]]></Action>
 waitAmb5.reset();
 waitAmb6.reset();]]></Action>
 				</Event>
+				<Event>
+					<Id>1618794936344</Id>
+					<Name><![CDATA[yellow]]></Name>
+					<X>150</X><Y>350</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="cyclic">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_SECOND]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1618732800000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[0]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[SECOND]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[//hasAmb()]]></Condition>
+					</Properties>
+				</Event>
 			</Events>
 			<Functions>
 				<Function AccessType="default" StaticFunction="false">
@@ -2450,17 +2474,67 @@ waitAmb6.reset();]]></Action>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[try{
+					<Body><![CDATA[/*
+public int[] carArrGreenInt1= {0,0,0,0};
+public int[] carArrGreenInt2= {0,0,0};
+
+public int[] carArrRedInt1= {0,0,0,0};
+public int[] carArrRedInt2= {0,0,0};
+
+public int[] carDepInt1= {0,0,0,0};
+public int[] carDepInt2= {0,0,0};
+
+public int[] carRemInt1= {0,0,0,0};
+public int[] carRemInt2= {0,0,0};
+*/
+try{
 		        int[] numCarsArray = {road.nCars(true),road1.nCars(false),road2.nCars(false),road3.nCars(false)};
 		        JSONObject obj = new JSONObject();
-		        String numCars = "";
+		        /*String numCars = "";
+		        String arrivedGreen = "";
+		        String arrivedRed = "";
+		        String carDep = "";
+		        String remaining = "";
 		        for (int i=0;i < numCarsArray.length; i++){
 					if(i > 0){
 						numCars += ",";
 					}
 		        	numCars += numCarsArray[i];
 		        }
-		        obj.put("numCars",numCars);
+		        //done
+		        for (int i=0;i < carArrGreenInt1.length; i++){
+					if(i > 0){
+						arrivedGreen += ",";
+					}
+		        	arrivedGreen += carArrGreenInt1[i];
+		        }
+		        //done
+		        for (int i=0;i < carArrRedInt1.length; i++){
+					if(i > 0){
+						arrivedRed += ",";
+					}
+		        	arrivedRed += carArrRedInt1[i];
+		        }
+		        //done
+		        for (int i=0;i < carDepInt1.length; i++){
+					if(i > 0){
+						carDep += ",";
+					}
+		        	carDep += carDepInt1[i];
+		        }
+		        //done
+		        for (int i=0;i < carRemInt1.length; i++){
+					if(i > 0){
+						remaining += ",";
+					}
+		        	remaining += carRemInt1[i];
+		        }*/
+		        //add i1[] in the message
+		        obj.put("numCars",carRemInt1);
+		        /*obj.put("ArrivedGreen",arrivedGreen);
+		        obj.put("ArrivedRed",arrivedRed);
+		        obj.put("departure",carDep);
+		        obj.put("remaining",remaining);*/
 		        obj.put("intersection",1);
 		        client.publish(
                 "sendCloud", // topic
@@ -2492,18 +2566,27 @@ waitAmb6.reset();]]></Action>
                 System.out.println("message recieved: " + mqttMessage.toString());
                 String mqttStr = mqttMessage.toString();
                 System.out.println(mqttStr);
-                if(mqttStr.contains("delays1")){
-                	System.out.println("Intersection 1 delays modified");
-	                mqttStr = mqttStr.substring(11,mqttStr.length()-2);
-	                String []msg=mqttStr.split(",");
+                if(mqttStr.contains("delay1")){
+                	/*System.out.println("Intersection 1 delays modified");
+	                mqttStr = mqttStr.substring(12,mqttStr.length()-2);
+	                String []msg=mqttStr.split(", ");
 	                for(int i=0;i<i1.length;i++)
-	                	i1[i]=Integer.parseInt(msg[i]);
-                }else if(mqttStr.contains("delays2")){
-                	System.out.println("Intersection 2 delays modified");
+	                	i1[i]=Integer.parseInt(msg[i]);*/
+	                JSONObject obj = new JSONObject(mqttStr);
+					JSONArray arr = obj.getJSONArray("delay1");
+					System.out.println("#### I love spegitti ####");
+					for (int i = 0; i < arr.length(); i++)
+					    i1[i] = arr.getInt(i);
+                }else if(mqttStr.contains("delay2")){
+                	/*System.out.println("Intersection 2 delays modified");
 	                mqttStr = mqttStr.substring(11,mqttStr.length()-2);
 	                String []msg=mqttStr.split(",");
 	                for(int i=0;i<i2.length;i++)
-	                	i2[i]=Integer.parseInt(msg[i]);
+	                	i2[i]=Integer.parseInt(msg[i]);*/
+	                JSONObject obj = new JSONObject(mqttStr);
+					JSONArray arr = obj.getJSONArray("delay2");
+					for (int i = 0; i < arr.length(); i++)
+					    i2[i] = arr.getInt(i);
                 }
             }
 
@@ -2567,7 +2650,7 @@ waitAmb6.reset();]]></Action>
 					}
 		        	numCars += numCarsArray[i];
 		        }
-		        obj.put("numCars",numCars);
+		        obj.put("numCars",carRemInt2);
 		        obj.put("intersection",2);
 		        client.publish(
                 "sendCloud", // topic
@@ -2727,7 +2810,7 @@ trafficLight1.turnOff();}
 		trafficLight.turnOff();
 		i1Time[0]++;
 	}
-	else {
+	else {	
 			trafficLight.turnOn();
 			i1Time[0]=0;
 			tr1Turn[0] = false;
@@ -3115,6 +3198,25 @@ case 3:
 }
 carRemInt1[index]++;]]></Body>
 				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618792837228</Id>
+					<Name><![CDATA[printArray]]></Name>
+					<X>140</X><Y>20</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[array]]></Name>
+						<Type><![CDATA[int[]]]></Type>
+					</Parameter>
+					<Body><![CDATA[for(int i = 0; i < array.length; i++){
+	System.out.print(array[i] +  ", ");
+}
+System.out.println();]]></Body>
+				</Function>
 			</Functions>
 			<AgentLinks>
 				<AgentLink>
@@ -3164,6 +3266,10 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[10000]]></Code>
+								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
@@ -3283,15 +3389,31 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[1.8]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.2]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addCarToCustomPopulation]]></Name>
@@ -3370,6 +3492,10 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[10000]]></Code>
+								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
@@ -3492,15 +3618,31 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[1.8]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.2]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addCarToCustomPopulation]]></Name>
@@ -3579,6 +3721,10 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[10000]]></Code>
+								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
@@ -3701,15 +3847,31 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[1.8]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.2]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addCarToCustomPopulation]]></Name>
@@ -3788,6 +3950,10 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[10000]]></Code>
+								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
@@ -3910,15 +4076,31 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[1.8]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.2]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addCarToCustomPopulation]]></Name>
@@ -3997,6 +4179,10 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[rate]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[10000]]></Code>
+								<Unit Class="RateUnits"><![CDATA[PER_HOUR]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[interarrivalTime]]></Name>
@@ -4116,15 +4302,31 @@ carRemInt1[index]++;]]></Body>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[initialSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[preferredSpeed]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[60]]></Code>
+								<Unit Class="SpeedUnits"><![CDATA[KPH]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxAcceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[1.8]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[maxDeceleration]]></Name>
+							<Value Class="CodeUnitValue">
+								<Code><![CDATA[4.2]]></Code>
+								<Unit Class="AccelerationUnits"><![CDATA[MPS_SQ]]></Unit>
+							</Value>
 						</Parameter>
 						<Parameter>
 							<Name><![CDATA[addCarToCustomPopulation]]></Name>
@@ -5425,7 +5627,7 @@ carRemInt1[index]++;]]></Body>
 				<EmbeddedObject>
 					<Id>1618612522982</Id>
 					<Name><![CDATA[carSource6]]></Name>
-					<X>385</X><Y>-270</Y>
+					<X>390</X><Y>-290</Y>
 					<Label><X>-15</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5936,7 +6138,7 @@ carRemInt1[index]++;]]></Body>
 				<EmbeddedObject>
 					<Id>1618623800088</Id>
 					<Name><![CDATA[carSource7]]></Name>
-					<X>400</X><Y>-370</Y>
+					<X>760</X><Y>-350</Y>
 					<Label><X>-15</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6146,7 +6348,7 @@ carRemInt1[index]++;]]></Body>
 				<EmbeddedObject>
 					<Id>1618623838577</Id>
 					<Name><![CDATA[carSource8]]></Name>
-					<X>390</X><Y>-110</Y>
+					<X>740</X><Y>-150</Y>
 					<Label><X>-15</X><Y>-30</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -9745,15 +9947,15 @@ carDepInt2[2]++;]]></Code>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 		<Resource>
-			<Path><![CDATA[json-simple-1.1.1.jar]]></Path>
-			<ReferencedFromUserCode>false</ReferencedFromUserCode>
-		</Resource>
-		<Resource>
 			<Path><![CDATA[org.eclipse.paho.client.mqttv3-1.2.5.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 		<Resource>
 			<Path><![CDATA[3d/truck.dae]]></Path>
+			<ReferencedFromUserCode>false</ReferencedFromUserCode>
+		</Resource>
+		<Resource>
+			<Path><![CDATA[json-20210307.jar]]></Path>
 			<ReferencedFromUserCode>false</ReferencedFromUserCode>
 		</Resource>
 	</ModelResources>
@@ -9778,7 +9980,7 @@ carDepInt2[2]++;]]></Code>
 	<ClassPathEntry>
 		<ResourceReference>
 			<PackageName><![CDATA[finalmodel]]></PackageName>
-			<ClassName><![CDATA[json-simple-1.1.1.jar]]></ClassName>
+			<ClassName><![CDATA[org.eclipse.paho.client.mqttv3-1.2.5.jar]]></ClassName>
 		</ResourceReference>
 		<Imported>true</Imported>
 		<Folder>false</Folder>
@@ -9786,7 +9988,7 @@ carDepInt2[2]++;]]></Code>
 	<ClassPathEntry>
 		<ResourceReference>
 			<PackageName><![CDATA[finalmodel]]></PackageName>
-			<ClassName><![CDATA[org.eclipse.paho.client.mqttv3-1.2.5.jar]]></ClassName>
+			<ClassName><![CDATA[json-20210307.jar]]></ClassName>
 		</ResourceReference>
 		<Imported>true</Imported>
 		<Folder>false</Folder>
