@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.3.202103181427" AlpVersion="8.7.1">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.3.202103181411" AlpVersion="8.7.1">
 <Model>
 	<Id>1618609451990</Id>
 	<Name><![CDATA[FinalModel]]></Name>
@@ -1955,7 +1955,10 @@ import org.json.JSONObject;]]></Import>
 + " | | " + tr2Turn[0]+ " " + tr2Turn[1]+ " " + tr2Turn[2]+ " "
 + i2Time[0] + " " + i2Time[1] + " " + i2Time[2] );
 */
+print("");
+print("i1");
 printArray(i1);
+print("i2");
 printArray(i2);
 /*
 System.out.print("arrive green1 ");
@@ -2179,7 +2182,7 @@ resetTime1();
 				<Event>
 					<Id>1618694990808</Id>
 					<Name><![CDATA[waitAmb2]]></Name>
-					<X>240</X><Y>560</Y>
+					<X>300</X><Y>560</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -2530,12 +2533,13 @@ try{
 		        	remaining += carRemInt1[i];
 		        }*/
 		        //add i1[] in the message
-		        obj.put("numCars",carRemInt1);
+		        obj.put("numCars",numCarsArray);
 		        /*obj.put("ArrivedGreen",arrivedGreen);
 		        obj.put("ArrivedRed",arrivedRed);
 		        obj.put("departure",carDep);
 		        obj.put("remaining",remaining);*/
 		        obj.put("intersection",1);
+		        print(obj.toString());
 		        client.publish(
                 "sendCloud", // topic
                 obj.toString().getBytes(), // payload
@@ -2574,7 +2578,7 @@ try{
 	                	i1[i]=Integer.parseInt(msg[i]);*/
 	                JSONObject obj = new JSONObject(mqttStr);
 					JSONArray arr = obj.getJSONArray("delay1");
-					System.out.println("#### I love spegitti ####");
+					//System.out.println("#### I love spegitti ####");
 					for (int i = 0; i < arr.length(); i++)
 					    i1[i] = arr.getInt(i);
                 }else if(mqttStr.contains("delay2")){
@@ -2650,8 +2654,10 @@ try{
 					}
 		        	numCars += numCarsArray[i];
 		        }
-		        obj.put("numCars",carRemInt2);
+		        //printArray(carRemInt2);
+		        obj.put("numCars",numCarsArray);
 		        obj.put("intersection",2);
+		        print(obj.toString());
 		        client.publish(
                 "sendCloud", // topic
                 obj.toString().getBytes(), // payload
@@ -3216,6 +3222,22 @@ carRemInt1[index]++;]]></Body>
 	System.out.print(array[i] +  ", ");
 }
 System.out.println();]]></Body>
+				</Function>
+				<Function AccessType="default" StaticFunction="false">
+					<ReturnModificator>VOID</ReturnModificator>
+					<ReturnType><![CDATA[double]]></ReturnType>
+					<Id>1618798333334</Id>
+					<Name><![CDATA[print]]></Name>
+					<X>160</X><Y>100</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Parameter>
+						<Name><![CDATA[string]]></Name>
+						<Type><![CDATA[String]]></Type>
+					</Parameter>
+					<Body><![CDATA[System.out.println(string);]]></Body>
 				</Function>
 			</Functions>
 			<AgentLinks>
